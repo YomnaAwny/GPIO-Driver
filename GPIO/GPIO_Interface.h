@@ -41,6 +41,7 @@
 	 u8 mode;
 	 u8 speed;
 	 u8 pullType;
+	 u8 setreset; //0 for reset , 1 for set
  }GPIO_Config;
 
 void GPIO_Init(GPIO_Config* config);

@@ -127,7 +127,10 @@ void GPIO_GetPin(GPIO_Config* config){
 				break;
 		}
 
-	return(GPIOX->IDR &(1<<config->pinN));
+		if(GPIOX->IDR &(1<<config->pinN))
+	return 1;
+		else
+	return 0;
 
 }
 
@@ -153,9 +156,15 @@ void GPIO_SetPin(GPIO_Config* config){
 		}
 
 #if Atomic==NO
+  if (cobfig->setreset)
 	GPIOX->ODR |=(1<<config->pinN);
+  else
+	  GPIOX->ODR &=~(1<<config->pinN);
 #else
+  if (cobfig->setreset)
 	GPIOX->BSRR =(1<<config->pinN);
+  else
+	  GPIOX->BRR =(1<<config->pinN);
 #endif
 
 }
