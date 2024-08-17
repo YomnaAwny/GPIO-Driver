@@ -107,7 +107,7 @@ else{
 }
 
 
-void GPIO_GetPin(GPIO_Config* config){
+u8 GPIO_GetPin(GPIO_Config* config){
 
 	GPIO_Reg* GPIOX;
 

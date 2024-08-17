@@ -46,7 +46,7 @@
 void GPIO_Init(GPIO_Config* config);
 
 void GPIO_SetPin(GPIO_Config* config);
-void GPIO_GetPin(GPIO_Config* config);
+u8 GPIO_GetPin(GPIO_Config* config);
 
 
 #endif /* GPIO_INTERFACE_H_ */
