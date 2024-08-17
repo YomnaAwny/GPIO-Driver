@@ -31,7 +31,6 @@
 #define GPIO_PULLDOWN 0
 
 #define ATOMIC      YES
-#define OUTPUT_PIN  13
 
 
  typedef enum{PORTA, PORTB, PORTC, PORTD}GPIO_Port;
