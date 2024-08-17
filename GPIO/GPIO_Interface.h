@@ -30,7 +30,7 @@
 #define GPIO_PULLUP   1
 #define GPIO_PULLDOWN 0
 
-#define Atomic      YES
+#define ATOMIC      YES
 #define OUTPUT_PIN  13
 
 

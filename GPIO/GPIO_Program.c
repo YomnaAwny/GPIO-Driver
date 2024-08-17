@@ -155,7 +155,7 @@ void GPIO_SetPin(GPIO_Config* config){
 				break;
 		}
 
-#if Atomic==NO
+#if AtOMIC==NO
   if (cobfig->setreset)
 	GPIOX->ODR |=(1<<config->pinN);
   else
